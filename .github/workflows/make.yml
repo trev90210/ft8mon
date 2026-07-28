@@ -17,11 +17,8 @@ jobs:
     # pre-installed on ubuntu-1804: build-essential, git 2.28.0, cmake 3.10/3.17, make
     # pre-installed: clang 6.0 / 8 / 9, gcc/++ 7.5.0/8.4.0/9.3.0
       run: sudo apt -qq update && sudo apt -yqq install libusb-1.0-0-dev
-    - name: cmake_make
+    - name: make
       run: |
-        mkdir build 
-        cmake -S . -B build 
-        cd build
         make
     - name: compress
       run: |
@@ -47,8 +44,8 @@ jobs:
     # pre-installed on macos-10.15: git 2.28.0, cmake 3.18.2, libusb 1.0.23
     # pre-installed: clang/LLVM 10.0.1, gcc/++ 8.4.0/9.3.0
     #  run: brew install libusb
-    - name: cmake_make
-      run: mkdir build && cmake -S . -B build && cd build && make
+    - name: make
+      run: make
     - name: compress
       run: |
         tar zcvf librtlsdr_build_macos-latest.tar.gz \
