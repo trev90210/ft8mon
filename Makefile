@@ -1,7 +1,7 @@
 CXX = c++ -O
 # CXX += -g -fsanitize=address
 # CXX = g++9 -O3
-FLAGS = -std=c++17 -I/opt/local/include -I/usr/local/include -I/opt/local/include/libairspyhf -I/usr/include/libairspyhf
+FLAGS = -std=c++17 -I/opt/local/include -I/usr/local/include
 LIBS = -L/opt/local/lib -L/usr/local/lib -lfftw3 -lsndfile
 
 MOREC = 
@@ -11,6 +11,7 @@ MOREH =
 # try -lusb or -lusb-1.0 ; also apt install libusb-1.0-0-dev
 # CXX += -DUSE_AIRSPYHF
 # LIBS += -lairspyhf -lliquid -lusb-1.0
+# FLAGS += -I/opt/local/include/libairspyhf -I/usr/include/libairspyhf
 
 # for the Apache ANAN-7000dle, and possibly other HPSDR radios.
 # CXX += -DUSE_HPSDR
