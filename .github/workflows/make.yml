@@ -43,7 +43,7 @@ jobs:
     # pre-installed on macos-10.15: git 2.28.0, cmake 3.18.2, libusb 1.0.23
     # pre-installed: clang/LLVM 10.0.1, gcc/++ 8.4.0/9.3.0 libcurl
       run: |
-        brew install libusb help2man ntp libsndfile fftw libliquid-dsp
+        brew install libusb help2man ntp libsndfile fftw liquid-dsp
     - name: make
       run: make
     - name: compress
