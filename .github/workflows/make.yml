@@ -19,7 +19,7 @@ jobs:
       run: |
         sudo apt -qq update
         sudo apt -yqq install libusb-1.0-0-dev \
-        libfftw3-dev libcurl4-gnutls-dev help2man ntp sndfile # libliquid-dsp
+        libfftw3-dev libcurl4-gnutls-dev help2man ntp libsndfile-dev # libliquid-dsp
     - name: make
       run: |
         make
