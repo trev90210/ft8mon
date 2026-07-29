@@ -38,24 +38,20 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v4
-    #- name: prerequisites
+    - uses: actions/checkout@v5
+    - name: prerequisites
     # pre-installed on macos-10.15: git 2.28.0, cmake 3.18.2, libusb 1.0.23
     # pre-installed: clang/LLVM 10.0.1, gcc/++ 8.4.0/9.3.0
-    #  run: brew install libusb
+      run: brew install libusb libfftw3-dev libcurl4-gnutls-dev help2man ntp libsndfile libliquid-dsp
     - name: make
       run: make
     - name: compress
       run: |
-        tar zcvf librtlsdr_build_macos-latest.tar.gz \
-        --directory=build/src \
-        --exclude=CMakeFiles \
-        --exclude=*.cmake \
+        tar zcvf ft8mon_build_macos-latest.tar.gz \
         --exclude=Makefile \
-        --exclude=rtl_app_ver.h \
         .
     - name: 'Upload Artifact'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: macos_latest_build.tar.gz
-        path: librtlsdr_build_macos-latest.tar.gz
+        path: ft8mon_build_macos-latest.tar.gz
