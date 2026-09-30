@@ -24,6 +24,9 @@ jobs:
     - name: make
       run: |
         make
+    - name: list
+      run: |
+        ls -lashr
     - name: compress
       run: |
         tar zcvf ft8mon_build_ubuntu-amd64_latest.tar.gz \
