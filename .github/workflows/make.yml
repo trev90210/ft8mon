@@ -56,6 +56,9 @@ jobs:
     #- name: list /opt/homebrew/lib
     #  run: |
     #    ls -lashR /opt/homebrew/lib
+    - name: list /opt/homebrew
+      run: |
+        ls -lash /opt/homebrew
     #- name: find
     #  run: |
     #    find / -name fftw3.h
