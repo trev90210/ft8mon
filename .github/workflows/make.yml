@@ -8,8 +8,14 @@ on:
     branches: [ master, development ]
 
 jobs:
-  build_ubuntu-amd64_latest:
-    runs-on: ubuntu-latest
+  build_linux:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - ubuntu-26.04-arm
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v7
@@ -29,14 +35,14 @@ jobs:
     #    ls -lashR ..
     - name: compress
       run: |
-        tar zcvf ft8mon_build_ubuntu-amd64_latest.tar.gz \
+        tar zcvf ft8mon_build_ubuntu-${{ matrix.os }}.tar.gz \
         --exclude=Makefile \
         ft8mon
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v7
       with:
-        name: ubuntu_latest_build.tar.gz
-        path: ft8mon_build_ubuntu-amd64_latest.tar.gz
+        name: ubuntu_${{ matrix.os }}.tar.gz
+        path: ft8mon_build_ubuntu-${{ matrix.os }}.tar.gz
 
   build_macos_latest:
     runs-on: macos-latest
