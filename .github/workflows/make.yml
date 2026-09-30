@@ -48,7 +48,7 @@ jobs:
     # pre-installed: clang/LLVM 10.0.1, gcc/++ 8.4.0/9.3.0 libcurl
       run: |
         brew trust aws/tap
-        brew install librtlsdr 
+        brew install librtlsdr portaudio
         brew install libusb help2man ntp libsndfile fftw liquid-dsp
     #- name: list /usr/local
     #  run: |
