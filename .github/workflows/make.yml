@@ -24,9 +24,9 @@ jobs:
     - name: make
       run: |
         make
-    - name: list
-      run: |
-        ls -lashR ..
+    #- name: list
+    #  run: |
+    #    ls -lashR ..
     - name: compress
       run: |
         tar zcvf ft8mon_build_ubuntu-amd64_latest.tar.gz \
@@ -50,6 +50,15 @@ jobs:
         brew trust aws/tap
         brew install librtlsdr 
         brew install libusb help2man ntp libsndfile fftw liquid-dsp
+    - name: list /usr/local
+      run: |
+        ls -lashR /usr/local
+    - name: list /usr/local/lib
+      run: |
+        ls -lashR /usr/local/lib
+    - name: list /opt/homebrew
+      run: |
+        ls -lashR /opt/homebrew
     - name: make
       run: make
     - name: compress
