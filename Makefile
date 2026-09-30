@@ -1,8 +1,8 @@
 CXX = c++ -O
 # CXX += -g -fsanitize=address
 # CXX = g++9 -O3
-FLAGS = -std=c++17 -I/opt/local/include -I/usr/local/include
-LIBS = -L/opt/local/lib -L/usr/local/lib -L/opt/homebrew/include -lfftw3 -lsndfile
+FLAGS = -std=c++17 -I/opt/local/include -I/usr/local/include -I/opt/homebrew/include
+LIBS = -L/opt/local/lib -L/usr/local/lib -lfftw3 -lsndfile
 
 MOREC = 
 MOREH = 
