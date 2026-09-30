@@ -53,9 +53,6 @@ jobs:
     - name: list /usr/local
       run: |
         ls -lashR /usr/local
-    - name: list /usr/local/lib
-      run: |
-        ls -lashR /usr/local/lib
     - name: list /opt/homebrew
       run: |
         ls -lashR /opt/homebrew
