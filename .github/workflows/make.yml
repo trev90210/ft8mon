@@ -50,15 +50,15 @@ jobs:
         brew trust aws/tap
         brew install librtlsdr 
         brew install libusb help2man ntp libsndfile fftw liquid-dsp
-    - name: list /usr/local
-      run: |
-        ls -lashR /usr/local
-    - name: list /opt/homebrew/lib
-      run: |
-        ls -lashR /opt/homebrew/lib
-    - name: find
-      run: |
-        find / -name fftw3.h
+    #- name: list /usr/local
+    #  run: |
+    #    ls -lashR /usr/local
+    #- name: list /opt/homebrew/lib
+    #  run: |
+    #    ls -lashR /opt/homebrew/lib
+    #- name: find
+    #  run: |
+    #    find / -name fftw3.h
     - name: make
       run: make
     - name: compress
