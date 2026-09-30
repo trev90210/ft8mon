@@ -26,7 +26,7 @@ jobs:
         sudo apt -qq update
         sudo apt -yqq install libusb-1.0-0-dev \
         librtlsdr-dev portaudio19-dev \
-        libfftw3-dev libcurl4-gnutls-dev help2man ntp libsndfile-dev libliquid-dev # libliquid-dsp
+        libfftw3-dev libcurl4-gnutls-dev help2man openntpd libsndfile-dev libliquid-dev # libliquid-dsp
     - name: make
       run: |
         make
