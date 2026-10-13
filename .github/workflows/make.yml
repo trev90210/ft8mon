@@ -64,10 +64,10 @@ jobs:
     #    ls -lashR /opt/homebrew/lib
     - name: list /opt/homebrew/lib
       run: |
-        ls -lash /opt/homebrew/lib
-    #- name: list /opt/homebrew/Cellar
-    #  run: |
-    #    ls -lash /opt/homebrew/Cellar
+        ls -lashR /opt/homebrew/lib
+    - name: list /opt/homebrew/Cellar
+      run: |
+        ls -lashR /opt/homebrew/Cellar
     #- name: find
     #  run: |
     #    find / -name fftw3.h
