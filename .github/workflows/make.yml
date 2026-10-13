@@ -41,7 +41,7 @@ jobs:
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v7
       with:
-        name: ubuntu_${{ matrix.os }}.tar.gz
+        name: ft8mon_ubuntu_${{ matrix.os }}.tar.gz
         path: ft8mon_build_ubuntu-${{ matrix.os }}.tar.gz
 
   build_macos_latest:
@@ -78,5 +78,5 @@ jobs:
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v7
       with:
-        name: macos_latest_build.tar.gz
+        name: ft8mon_macos_latest_build.tar.gz
         path: ft8mon_build_macos-latest.tar.gz
