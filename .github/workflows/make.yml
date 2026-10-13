@@ -78,5 +78,5 @@ jobs:
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v7
       with:
-        name: ft8mon_macos_latest_build.tar.gz
-        path: ft8mon_build_macos-latest.tar.gz
+        name: ft8mon_macos_latest_build
+        path: ft8mon
